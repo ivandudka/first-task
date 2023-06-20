@@ -1,0 +1,29 @@
+import { Page } from "@playwright/test";
+
+export default class DateHomePage{    //HomePage
+
+    constructor(private page: Page){}
+
+    async clickButton1(dateFilter:string){
+        await this.dateFilterButton
+        .type(dateFilter)
+    }
+    get dateFilterButton(){
+        return this.page.locator(SELECTORS.dateFilterButton)
+    }
+     async clickButton2(datainputField:string){
+        await this.datainput2Field
+        .type(datainputField)
+     }
+     get datainput2Field(){
+        return this.page.locator(SELECTORS.datainput2Field)
+     }
+     async clickButton3(dateinputField:string){
+        await this.dateinput3Field
+        .type(dateinputField)
+     }
+     get dateinput3Field(){
+        return this.page.locator(SELECTORS.datainput3Field)
+     }
+
+    }
